@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-[#ffffff];
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
+  input {
+    @apply bg-[#0d1727] rounded-md focus:outline-none w-full py-2 px-1 mt-1;
+  }
+}
+
+@layer components {
+  .app {
+    @apply px-2 md:w-[500px] h-[100vh] overflow-auto ml-auto mr-auto bg-gradient-to-r from-blue-800 to-[#173764];
+  }
+  .authButton {
+    @apply px-4 py-2 text-lg border-[1px] border-[#d1d4d8] whitespace-nowrap mt-6;
+  }
+}
