@@ -1,4 +1,4 @@
-import { CategoryResponse, UpdateCategory, UserUnautheticated } from "../types";
+import { CategoryResponse, UpdateCategory } from "../types";
 import { baseApi } from "./baseApi";
 
 export const categoryApi = baseApi.injectEndpoints({
