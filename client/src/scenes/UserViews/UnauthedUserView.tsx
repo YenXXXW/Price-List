@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const UnauthedUserView = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <section>
       <p className="font-bold ">Please Login In or SignUp to use the service</p>
