@@ -23,7 +23,10 @@ app.use(morgan("dev"));
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://price-tracker-yenxxxw.vercel.app",
+    ],
     optionsSuccessStatus: 200,
     credentials: true,
   })
