@@ -39,6 +39,8 @@ app.use(
     saveUninitialized: false,
     cookie: {
       maxAge: 60 * 60 * 1000,
+      sameSite: "none",
+      secure: true,
     },
 
     rolling: true,
