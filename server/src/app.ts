@@ -29,6 +29,7 @@ app.use(
       "https://price-tracker-drab.vercel.app/",
     ],
     optionsSuccessStatus: 200,
+    methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
     credentials: true,
   })
 );
@@ -41,6 +42,7 @@ app.use(
     cookie: {
       maxAge: 60 * 60 * 1000,
       sameSite: "none",
+      httpOnly: true,
       secure: true,
     },
 
