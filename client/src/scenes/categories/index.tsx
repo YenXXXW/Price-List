@@ -63,7 +63,7 @@ const Categories = () => {
     <section className=" relative w-full h-full flex flex-col gap-4">
       <div className="flex justify-between">
         <p className="font-bold text-3xl">Categories</p>
-        <div className="text-blue-600 flex gap-4">
+        <div className="text-blue-200 font-bold flex gap-4">
           <div className="cursor-pointer" onClick={() => setEdit(!edit)}>
             {edit ? (
               <div>

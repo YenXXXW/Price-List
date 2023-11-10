@@ -71,7 +71,7 @@ const ViewProucts = () => {
     <section className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <h3>Products</h3>
-        <div className="flex gap-2 text-blue-600">
+        <div className="flex gap-2 text-blue-200 font-bold">
           <div className="cursor-pointer" onClick={() => setEdit(!edit)}>
             {edit ? (
               <div>

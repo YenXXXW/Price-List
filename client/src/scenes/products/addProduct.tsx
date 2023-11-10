@@ -12,7 +12,6 @@ const AddProduct = () => {
   const [price, setPrice] = useState<string>("");
 
   const categoryId = useAppSelector((state) => state.products.categoryId);
-  console.log("category id is" + categoryId);
 
   const navigate = useNavigate();
 

@@ -36,31 +36,41 @@ const UpdateProduct = () => {
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
-      <label>Enter Product Name</label>
-      <br />
-      <input
-        type="text"
-        placeholder="product name"
-        required
-        value={productName}
-        onChange={(e) => setProductName(e.target.value)}
-        className="focus:outline-none bg-[#6D6866] w-[300px] px-2 rounded-md"
-      />
-      <br />
-      <label>Enter Product Price</label>
-      <br />
-      <input
-        type="text"
-        placeholder="price"
-        required
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-        className="focus:outline-none bg-[#6D6866] w-[300px] px-2 rounded-md"
-      />
-      <br />
-      <button>Update</button>
-    </form>
+    <section className="px-14">
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <label>Enter Product Name</label>
+        <br />
+        <input
+          type="text"
+          placeholder="product name"
+          required
+          value={productName}
+          onChange={(e) => setProductName(e.target.value)}
+          className="focus:outline-none bg-[#6D6866] px-2 rounded-md"
+        />
+        <br />
+        <label>Enter Product Price</label>
+        <br />
+        <input
+          type="text"
+          placeholder="price"
+          required
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          className="focus:outline-none bg-[#6D6866] px-2 rounded-md"
+        />
+        <br />
+        <button className="mt-6 p-2 w-full rounded-sm border-green-600 border-[1px] text-center">
+          Update
+        </button>
+      </form>
+      <button
+        onClick={() => navigate(`/products/${categoryId}`)}
+        className="mt-6 p-2 w-full rounded-sm border-red-600 border-[1px] text-center"
+      >
+        Cancel
+      </button>
+    </section>
   );
 };
 
