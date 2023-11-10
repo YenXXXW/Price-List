@@ -11,7 +11,6 @@ import session from "express-session";
 import env from "./utils/validateEnv";
 import MongoStore from "connect-mongo";
 import { requiresAuth } from "./middleware/auth";
-import validateEnv from "./utils/validateEnv";
 
 const app = express();
 
@@ -29,7 +28,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://price-tracker-yenxxxw.vercel.app",
-      "https://price-tracker-drab.vercel.app/",
+      "https://price-tracker-drab.vercel.app",
     ],
     optionsSuccessStatus: 200,
     methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
@@ -42,8 +41,12 @@ app.use(
     secret: env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
+    name: "MyCoolWebAppCookieName",
     cookie: {
-      maxAge: 60 * 60 * 1000,
+      httpOnly: true,
+      secure: true,
+      maxAge: 1000 * 60 * 60 * 48,
+      sameSite: "none",
     },
 
     rolling: true,
