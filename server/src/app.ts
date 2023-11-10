@@ -31,7 +31,6 @@ app.use(
       "https://price-tracker-drab.vercel.app",
     ],
     optionsSuccessStatus: 200,
-    methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
     credentials: true,
   })
 );
