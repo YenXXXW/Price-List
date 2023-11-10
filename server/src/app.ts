@@ -26,6 +26,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://price-tracker-yenxxxw.vercel.app",
+      "https://price-tracker-drab.vercel.app/",
     ],
     optionsSuccessStatus: 200,
     credentials: true,
