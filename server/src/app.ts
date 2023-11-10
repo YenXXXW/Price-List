@@ -40,7 +40,7 @@ app.use(
     secret: env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    name: "MyCoolWebAppCookieName",
+    name: "sessionId",
     cookie: {
       httpOnly: true,
       secure: true,
