@@ -11,6 +11,7 @@ import session from "express-session";
 import env from "./utils/validateEnv";
 import MongoStore from "connect-mongo";
 import { requiresAuth } from "./middleware/auth";
+import validateEnv from "./utils/validateEnv";
 
 const app = express();
 
@@ -43,7 +44,7 @@ app.use(
       maxAge: 60 * 60 * 1000,
       sameSite: "none",
       httpOnly: true,
-      secure: true,
+      secure: validateEnv.NODE_ENV === "prduction",
     },
 
     rolling: true,
