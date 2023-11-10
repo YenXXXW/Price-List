@@ -44,9 +44,6 @@ app.use(
     saveUninitialized: false,
     cookie: {
       maxAge: 60 * 60 * 1000,
-      sameSite: validateEnv.NODE_ENV === "prduction" ? "none" : "lax",
-      httpOnly: true,
-      secure: validateEnv.NODE_ENV === "prduction",
     },
 
     rolling: true,
