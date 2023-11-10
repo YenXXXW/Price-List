@@ -25,11 +25,7 @@ app.set("trust proxy", 1);
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://price-tracker-yenxxxw.vercel.app",
-      "https://price-tracker-drab.vercel.app",
-    ],
+    origin: ["http://localhost:5173", "https://price-list-yenxxxw.vercel.app"],
     optionsSuccessStatus: 200,
     credentials: true,
   })
