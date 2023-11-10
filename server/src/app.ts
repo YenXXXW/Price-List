@@ -22,6 +22,8 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 app.use(morgan("dev"));
 
+app.set("trust proxy", 1);
+
 app.use(
   cors({
     origin: [
@@ -42,7 +44,7 @@ app.use(
     saveUninitialized: false,
     cookie: {
       maxAge: 60 * 60 * 1000,
-      sameSite: "none",
+      sameSite: validateEnv.NODE_ENV === "prduction" ? "none" : "lax",
       httpOnly: true,
       secure: validateEnv.NODE_ENV === "prduction",
     },
