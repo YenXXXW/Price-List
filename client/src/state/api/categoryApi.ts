@@ -6,7 +6,6 @@ export const categoryApi = baseApi.injectEndpoints({
     getCategories: build.query<Array<CategoryResponse>, void>({
       query: () => ({
         url: "api/categories/",
-        credentials: "include",
       }),
       providesTags: ["Categories"],
     }),
