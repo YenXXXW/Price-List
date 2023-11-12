@@ -42,9 +42,6 @@ app.use(
     name: "sessionId",
     cookie: {
       maxAge: 1000 * 60 * 60 * 48,
-      httpOnly: env.isProduction ? true : false,
-      secure: env.isProduction,
-      sameSite: env.isProduction ? "none" : "lax",
     },
 
     rolling: true,
