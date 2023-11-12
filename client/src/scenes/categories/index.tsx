@@ -59,6 +59,10 @@ const Categories = () => {
       return <div className="font-bold text-lg">Unknown error occurred</div>;
   }
 
+  if (categories?.length === 0) {
+    return <p>No categories added.</p>;
+  }
+
   return (
     <section className=" relative w-full h-full flex flex-col gap-4">
       <div className="flex justify-between">

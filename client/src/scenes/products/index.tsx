@@ -67,6 +67,10 @@ const ViewProucts = () => {
       return <div className="font-bold text-lg">Unknown error occurred</div>;
   }
 
+  if (products?.length === 0) {
+    return <p>No porducts added.</p>;
+  }
+
   return (
     <section className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
