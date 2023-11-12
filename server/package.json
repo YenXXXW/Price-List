@@ -7,8 +7,7 @@
     "build": "npm i",
     "lint": "eslint . --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.ts",
-    "verdel-build": "echo hello"
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "",
