@@ -25,10 +25,7 @@ app.set("trust proxy", 1);
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173/",
-      "https://price-list-yenxxxw.vercel.app/",
-    ],
+    origin: ["http://localhost:5173", "https://price-list-yenxxxw.vercel.app"],
     optionsSuccessStatus: 200,
     credentials: true,
   })
@@ -41,7 +38,10 @@ app.use(
     saveUninitialized: false,
     name: "sessionId",
     cookie: {
+      httpOnly: true,
+      secure: true,
       maxAge: 1000 * 60 * 60 * 48,
+      sameSite: "none",
     },
 
     rolling: true,
@@ -51,9 +51,6 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
-  res.json({ message: "this is pricelist app" });
-});
 app.use("/api/categories", requiresAuth, categoroiesRoutes);
 
 app.use("/api/products", requiresAuth, productsRoutes);
