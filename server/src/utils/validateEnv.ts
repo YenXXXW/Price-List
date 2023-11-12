@@ -5,4 +5,6 @@ export default cleanEnv(process.env, {
   PORT: port(),
   SESSION_SECRET: str(),
   NODE_ENV: str(),
+  ALLOWED_DEPLOYED_URL: str(),
+  LOCAL_HOST_ADDRESS: str(),
 });

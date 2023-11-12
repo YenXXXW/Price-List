@@ -60,7 +60,12 @@ const Categories = () => {
   }
 
   if (categories?.length === 0) {
-    return <p>No categories added.</p>;
+    return (
+      <>
+        <h3>Products</h3>
+        <p>No products added.</p>
+      </>
+    );
   }
 
   return (

@@ -25,7 +25,7 @@ app.set("trust proxy", 1);
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://price-list-yenxxxw.vercel.app"],
+    origin: [env.ALLOWED_DEPLOYED_URL, env.LOCAL_HOST_ADDRESS],
     optionsSuccessStatus: 200,
     credentials: true,
   })
@@ -38,10 +38,10 @@ app.use(
     saveUninitialized: false,
     name: "sessionId",
     cookie: {
-      httpOnly: true,
-      secure: true,
       maxAge: 1000 * 60 * 60 * 48,
-      sameSite: "none",
+      httpOnly: true,
+      secure: env.isProduction,
+      sameSite: env.isProduction ? "none" : "lax",
     },
 
     rolling: true,
