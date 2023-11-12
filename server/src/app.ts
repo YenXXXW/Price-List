@@ -54,6 +54,9 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.json({ message: "this is pricelist app" });
+});
 app.use("/api/categories", requiresAuth, categoroiesRoutes);
 
 app.use("/api/products", requiresAuth, productsRoutes);
