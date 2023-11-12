@@ -25,7 +25,7 @@ app.set("trust proxy", 1);
 
 app.use(
   cors({
-    origin: [env.ALLOWED_DEPLOYED_URL, env.LOCAL_HOST_ADDRESS],
+    origin: ["http://localhost:5000"],
     optionsSuccessStatus: 200,
     credentials: true,
   })
