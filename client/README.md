@@ -1,3 +1,9 @@
+This is a simple mern stack
+
+This app allows you to classify categories and add price for each product of category.
+
+You can also update and delete information of the previously added products.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
